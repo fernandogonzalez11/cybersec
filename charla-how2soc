@@ -1,0 +1,58 @@
+how2soc
+===
+
+* mantenerse al día: los atacantes van cambiando de plataformas
+* saber cómo explotan, cómo evaden
+* no casarse con un lado de la moneda: solo red teaming, blue teaming, pentesting...
+* aprender a poquitos, no a muchos: noticias, artículos, cursos, webinars...
+* SOC: personas con herramientas que les ayudan a detectar, responder, reportar, prevenir lo que está sucediendo
+
+elementos / herramientas de SOC:
+* logs
+* reporting
+* SIEM: system information event manager
+* R&D
+* thread intel: ¿cómo los atacantes están mejorando? ¿cómo le hacen?
+* knowledge base
+
+no puedo hacer todo esto!! pero sí puedo entender un poco de cada uno. y me especializo en un área
+
+alta demanda
+* gente que analice y automatize cosas en lugar de solo mandar alertas
+* ataques de ia...
+
+SOC Tier 1/2
+* t
+
+![](charla-how2soc_20250424182658032.png)
+Cursos:
+* Hawks Security Academy
+* TryHackMe
+* BlueTeamLabs
+* RangeForce
+* HackTheBox
+* INE
+
+Blogs y canales:
+* ThreatHunting.dev
+* MalwareTrafficAnalysis
+* John Hammond
+* LiveOverflow
+
+Certificaciones:
+* Security+
+* Blue Team Level 1
+* GCIA
+* GCIH
+* Microsoft SC-200
+
+* conocer las herramientas: AWS, Azure, WinDefender, ...
+
+Incident Response Tools:
+* SIEM: get logs
+* EDR: protect endpoints
+* NTA: network traffic analysis
+* SOAR: automate responses
+* Forensics
+
+Threat hunting

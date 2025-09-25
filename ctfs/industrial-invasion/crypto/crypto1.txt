@@ -1,0 +1,10 @@
+VIRELIA-WATER-FAC
+MD5=531faccba7cb4c25c3449b6616c3c6ee
+SHA1=0884a3d29fcb06efc761e2afacfe0e8c27b957d0
+
+openssl enc -d -aes-256-cbc -in shutdown.log-1750934543756.enc -out decrypted.log -pass pass:VIRELIA-WATER-FAC -iv 00000000000000000000000000000000 -nosalt
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+tera@teramint:~/Documents/cybersec/ctfs/industrial-invasion$ cat decrypted.log 
+CMD:SHUTDOWN
+THM{cbc_cl3ar4nce_gr4nt3d_10939}

@@ -1,0 +1,15 @@
+[    9.676910] Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000000
+[    9.678014] CPU: 0 PID: 1 Comm: init Tainted: G           O      5.5.0-rc7+ #6
+[    9.678290] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.12.0-1 04/01/2014
+[    9.678770] Call Trace:
+[    9.679927]  dump_stack+0x50/0x72
+[    9.680100]  panic+0xf6/0x2c6
+[    9.680282]  ? new_sync_read+0x10f/0x1a0
+[    9.680423]  ? do_exit.cold.31+0xd7/0xed
+[    9.680539]  ? vfs_read+0x8c/0x140
+[    9.680663]  ? do_group_exit+0x35/0x90
+[    9.680774]  ? __x64_sys_exit_group+0xf/0x10
+[    9.680925]  ? do_syscall_64+0x43/0x140
+[    9.681077]  ? entry_SYSCALL_64_after_hwframe+0x44/0xa9
+[    9.681893] Kernel Offset: 0x1fe00000 from 0xffffffff81000000 (relocation range: 0xffffffff80000000-0xffffffffbfffffff)
+[    9.682631] ---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000000 ]---

@@ -1,0 +1,47 @@
+flag1:
+
+54484d7b5375357373737d.virelia-water.it.com
+54484d7b5375357373737d.virelia-water.it.com
+
+flag2: {"session":"T-CN1-172","flag":"THM{uplink_channel_confirmed}"}
+
+From: DarkPulse <alerts@virelia-water.it.com>
+Date: Mon, 15 Jun 2025 02:15:00 +0000
+Subject: Scheduled OT Calibration
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Please confirm system integrity at 03:00 UTC.
+-----BEGIN PGP SIGNATURE-----
+
+iQFQBAEBCgA6FiEEiN7ee3MFE71e3W2fpPD+sISjEeUFAmhZTEQcHGFsZXJ0c0B2
+aXJlbGlhLXdhdGVyLml0LmNvbQAKCRCk8P6whKMR5ZIUCADM7F0WpKWWyj4WUdoL
+6yrJfJfmUKgJD+8K1neFosG7yaz+MspYxIlbKUek/VFhHZnaG2NRjn6BpfPSxfEk
+uvWNIP8rMVEv32vpqhCJ26pwrkAaUHlcPWqM4KYoAn4eEOeHCvxHNJBFnmWI5PBF
+pXbj7s6DhyZEHUmTo4JK2OZmiISP3OsHW8O8iz5JLUrA/qw9LCjY8PK79UoceRwW
+tJj9pVsE+TKPcFb/EDzqGmBH8GB1ki532/1/GDU+iivYSiRjxWks/ZYPu/bhktTo
+NNcOzgEfuSekkQAz+CiclXwEcLQb219TqcS3plnaO672kCV4t5MUCLvkXL5/kHms
+Sh5H
+=jdL7
+-----END PGP SIGNATURE-----
+      
+gpg --verify msg.txt 
+gpg: Signature made Mon 23 Jun 2025 06:44:52 AM CST
+gpg:                using RSA key 88DEDE7B730513BD5EDD6D9FA4F0FEB084A311E5
+gpg:                issuer "alerts@virelia-water.it.com"
+gpg: Can't check signature: No public key
+
+things that stand out:
+DarkPulse? (its a legit company but i dont think its related)
+alerts@virelia-water.it.com? (not a real email)
+Mon, 15 Jun 2025 02:15:00 +0000 -> 15 Jun is Sun
+Sent 45 minutes before "confirm system integrity"
+
+flag 3:
+gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 88DEDE7B730513BD5EDD6D9FA4F0FEB084A311E5
+gpg: /home/tera/.gnupg/trustdb.gpg: trustdb created
+gpg: key F8ED5BC28874364F: public key "Ghost (THM{h0pe_th1s_k3y_doesnt_le4d_t0_m3}) <solstice.tech.ops@gmail.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+

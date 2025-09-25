@@ -1,0 +1,640 @@
+ #######                  #######                           ######                                               ######                
+    #    #    # ######    #       # #    #   ##   #         #     #   ##   #    # #####   ####  #####    ##      #     #  ####  #    # 
+    #    #    # #         #       # ##   #  #  #  #         #     #  #  #  ##   # #    # #    # #    #  #  #     #     # #    #  #  #  
+    #    ###### #####     #####   # # #  # #    # #         ######  #    # # #  # #    # #    # #    # #    #    ######  #    #   ##   
+    #    #    # #         #       # #  # # ###### #         #       ###### #  # # #    # #    # #####  ######    #     # #    #   ##   
+    #    #    # #         #       # #   ## #    # #         #       #    # #   ## #    # #    # #   #  #    #    #     # #    #  #  #  
+    #    #    # ######    #       # #    # #    # ######    #       #    # #    # #####   ####  #    # #    #    ######   ####  #    # 
+                                                                                                                                       
+
+
+CONFIG_FG_KASLR=y
+
+
+Enter the password: dont look behind you
+dont look behind you
+Logged in !
+/ $ ls
+ls
+banner   dev      flag     init     proc     root     sys      usr
+bin      etc      home     linuxrc  prog     sbin     t
+/ $ ls -la
+ls -la
+total 856
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+-rw-rw----    1 ctf      ctf           1112 Oct 30  2023 banner
+drwxr-xr-x    2 root     root          1900 Oct 30  2023 bin
+drwxr-xr-x    3 root     root           220 Aug 16 20:43 dev
+drwxr-xr-x    2 root     root            80 Oct 30  2023 etc
+-rw-------    1 root     root            40 Oct 30  2023 flag
+drwxr-xr-x    3 ctf      ctf             60 Oct 30  2023 home
+-rwxr-xr-x    1 root     root           870 Oct 30  2023 init
+lrwxrwxrwx    1 root     root            11 Oct 30  2023 linuxrc -> bin/busybox
+dr-xr-xr-x  100 root     root             0 Aug 16 20:43 proc
+-rwxr-xr-x    1 ctf      ctf         861736 Oct 30  2023 prog
+drwx------    2 root     root            60 Oct 30  2023 root
+drwxr-xr-x    2 root     root          1480 Oct 30  2023 sbin
+dr-xr-xr-x   12 root     root             0 Aug 16 20:43 sys
+drwxr-xr-x    2 ctf      ctf             40 Aug 16 20:43 t
+drwxr-xr-x    4 root     root            80 Oct 30  2023 usr
+/ $ cd etc      
+cd etc
+/etc $ ls -la
+ls -la
+total 8
+drwxr-xr-x    2 root     root            80 Oct 30  2023 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+-rw-r--r--    1 root     root            31 Jul 30  2022 group
+-rw-r--r--    1 root     root           136 Apr  1  2022 passwd
+/etc $ cat group
+cat group
+root:x:0:
+tty:x:4:
+ctf:x:1000:
+/etc $ cat passwd
+cat passwd
+root:x:0:0:root:/root:/bin/sh
+ctf:x:1000:1000:ctf:/home/ctf:/bin/sh
+root:x:0:0:root:/root:/bin/sh
+ctf:x:1000:1000:ctf:/home/ctf:/bin/sh
+/etc $ cd ..
+cd ..
+/ $ ls -la bin
+ls -la bin
+total 2592
+drwxr-xr-x    2 root     root          1900 Oct 30  2023 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 arch -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 ash -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 base64 -> busybox
+-rwxr-xr-x    1 root     root       2650432 Apr  1  2022 busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 cat -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 chattr -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 chgrp -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 chmod -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 chown -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 conspy -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 cp -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 cpio -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 cttyhack -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 date -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 dd -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 df -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 dmesg -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 dnsdomainname -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 dumpkmap -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 echo -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 ed -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 egrep -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 false -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 fatattr -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 fdflush -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 fgrep -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 fsync -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 getopt -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 grep -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 gunzip -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 gzip -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 hostname -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 hush -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 ionice -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 iostat -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 ipcalc -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 kbd_mode -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 kill -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 link -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 linux32 -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 linux64 -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 ln -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 login -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 ls -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 lsattr -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 lzop -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 makemime -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 mkdir -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 mknod -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 mktemp -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 more -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 mount -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 mountpoint -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 mpstat -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 mt -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 mv -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 netstat -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 nice -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 nuke -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 pidof -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 ping -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 ping6 -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 pipe_progress -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 printenv -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 ps -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 pwd -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 reformime -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 resume -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 rev -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 rm -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 rmdir -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 rpm -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 run-parts -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 scriptreplay -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 sed -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 setarch -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 setpriv -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 setserial -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 sh -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 sleep -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 stat -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 stty -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 su -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 sync -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 tar -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 touch -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 true -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 umount -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 uname -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 usleep -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 vi -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 watch -> busybox
+lrwxrwxrwx    1 root     root             7 Oct 30  2023 zcat -> busybox
+/ $ ls -la dev
+ls -la dev
+total 0
+drwxr-xr-x    3 root     root           220 Aug 16 20:43 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+crw-------    1 root     tty         5,   1 Aug 16 20:43 console
+crw-rw-rw-    1 root     root        1,   3 Aug 16 20:43 null
+crw-rw-rw-    1 root     tty         5,   2 Aug 16 20:43 ptmx
+drwxr-xr-x    2 root     root             0 Aug 16 20:43 pts
+cr--r--r--    1 root     root        1,   8 Aug 16 20:43 random
+crw-rw-rw-    1 root     tty         5,   0 Aug 16 20:43 tty
+crw-rw----    1 root     root        4,  64 Aug 16 20:44 ttyS0
+cr--r--r--    1 root     root        1,   9 Aug 16 20:43 urandom
+crw-rw-rw-    1 root     root        1,   5 Aug 16 20:43 zero
+/ $ ls -la home
+ls -la home
+total 0
+drwxr-xr-x    3 ctf      ctf             60 Oct 30  2023 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+drwxr-xr-x    2 ctf      ctf             40 Oct 30  2023 ctf
+/ $ ls -la home/ctf
+ls -la home/ctf
+total 0
+drwxr-xr-x    2 ctf      ctf             40 Oct 30  2023 .
+drwxr-xr-x    3 ctf      ctf             60 Oct 30  2023 ..
+/ $ ls -la proc
+ls -la proc
+total 0
+dr-xr-xr-x  100 root     root             0 Aug 16 20:43 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 1
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 10
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 11
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 12
+dr-xr-xr-x    9 ctf      ctf              0 Aug 16 20:43 125
+dr-xr-xr-x    9 ctf      ctf              0 Aug 16 20:43 126
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 13
+dr-xr-xr-x    9 ctf      ctf              0 Aug 16 20:45 136
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 14
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 15
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 16
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 17
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 18
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 2
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 20
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 22
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 3
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 4
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 5
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 6
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 65
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 66
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 67
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 68
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 69
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 7
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 70
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 71
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 72
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 73
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 74
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 77
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 78
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 79
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 8
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 80
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 81
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 82
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 83
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 84
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 85
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 9
+dr-xr-xr-x    3 root     root             0 Aug 16 20:45 acpi
+-rw-rw-rw-    1 root     root             0 Aug 16 20:45 admin
+dr-xr-xr-x    9 root     root             0 Aug 16 20:45 asound
+-r--r--r--    1 root     root             0 Aug 16 20:45 buddyinfo
+dr-xr-xr-x    4 root     root             0 Aug 16 20:45 bus
+-r--r--r--    1 root     root             0 Aug 16 20:45 cgroups
+-r--r--r--    1 root     root             0 Aug 16 20:45 cmdline
+-r--r--r--    1 root     root             0 Aug 16 20:45 consoles
+-r--r--r--    1 root     root             0 Aug 16 20:45 cpuinfo
+-r--r--r--    1 root     root             0 Aug 16 20:45 crypto
+-r--r--r--    1 root     root             0 Aug 16 20:45 devices
+-r--r--r--    1 root     root             0 Aug 16 20:45 diskstats
+-r--r--r--    1 root     root             0 Aug 16 20:45 dma
+dr-xr-xr-x    4 root     root             0 Aug 16 20:45 driver
+-r--r--r--    1 root     root             0 Aug 16 20:45 execdomains
+-r--r--r--    1 root     root             0 Aug 16 20:45 fb
+-r--r--r--    1 root     root             0 Aug 16 20:45 filesystems
+dr-xr-xr-x    7 root     root             0 Aug 16 20:45 fs
+-r--r--r--    1 root     root             0 Aug 16 20:45 interrupts
+-r--r--r--    1 root     root             0 Aug 16 20:45 iomem
+-r--r--r--    1 root     root             0 Aug 16 20:45 ioports
+dr-xr-xr-x   19 root     root             0 Aug 16 20:45 irq
+-r--r--r--    1 root     root             0 Aug 16 20:45 kallsyms
+-r--------    1 root     root     140737477881856 Aug 16 20:45 kcore
+-r--r--r--    1 root     root             0 Aug 16 20:45 key-users
+-r--r--r--    1 root     root             0 Aug 16 20:45 keys
+-r--------    1 root     root             0 Aug 16 20:45 kmsg
+-r--------    1 root     root             0 Aug 16 20:45 kpagecount
+-r--------    1 root     root             0 Aug 16 20:45 kpageflags
+-r--r--r--    1 root     root             0 Aug 16 20:45 loadavg
+-r--r--r--    1 root     root             0 Aug 16 20:45 locks
+-r--r--r--    1 root     root             0 Aug 16 20:45 mdstat
+-r--r--r--    1 root     root             0 Aug 16 20:45 meminfo
+-r--r--r--    1 root     root             0 Aug 16 20:45 misc
+-r--r--r--    1 root     root             0 Aug 16 20:45 modules
+lrwxrwxrwx    1 root     root            11 Aug 16 20:45 mounts -> self/mounts
+-rw-r--r--    1 root     root             0 Aug 16 20:45 mtrr
+lrwxrwxrwx    1 root     root             8 Aug 16 20:45 net -> self/net
+-r--------    1 root     root             0 Aug 16 20:45 pagetypeinfo
+-r--r--r--    1 root     root             0 Aug 16 20:45 partitions
+-r--r--r--    1 root     root             0 Aug 16 20:45 schedstat
+dr-xr-xr-x    5 root     root             0 Aug 16 20:45 scsi
+lrwxrwxrwx    1 root     root             0 Aug 16 20:43 self -> 136
+-rw-------    1 root     root             0 Aug 16 20:45 slabinfo
+-r--r--r--    1 root     root             0 Aug 16 20:45 softirqs
+-r--r--r--    1 root     root             0 Aug 16 20:45 stat
+-r--r--r--    1 root     root             0 Aug 16 20:45 swaps
+dr-xr-xr-x    1 root     root             0 Aug 16 20:43 sys
+--w-------    1 root     root             0 Aug 16 20:45 sysrq-trigger
+dr-xr-xr-x    5 root     root             0 Aug 16 20:45 sysvipc
+lrwxrwxrwx    1 root     root             0 Aug 16 20:43 thread-self -> 136/task/136
+-r--------    1 root     root             0 Aug 16 20:45 timer_list
+dr-xr-xr-x    6 root     root             0 Aug 16 20:45 tty
+-r--r--r--    1 root     root             0 Aug 16 20:45 uptime
+-r--r--r--    1 root     root             0 Aug 16 20:45 version
+-r--------    1 root     root             0 Aug 16 20:45 vmallocinfo
+-r--r--r--    1 root     root             0 Aug 16 20:45 vmstat
+-r--r--r--    1 root     root             0 Aug 16 20:45 zoneinfo
+/ $ ls -la root
+ls -la root
+ls: can't open 'root': Permission denied
+total 0
+/ $ ls -la sbin 
+ls -la sbin
+total 0
+drwxr-xr-x    2 root     root          1480 Oct 30  2023 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 acpid -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 adjtimex -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 arp -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 blkid -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 blockdev -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 bootchartd -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 depmod -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 devmem -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 fbsplash -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 fdisk -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 findfs -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 freeramdisk -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 fsck -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 fsck.minix -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 fstrim -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 getty -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 halt -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 hdparm -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 hwclock -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 ifconfig -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 ifdown -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 ifenslave -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 ifup -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 init -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 insmod -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 ip -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 ipaddr -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 iplink -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 ipneigh -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 iproute -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 iprule -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 iptunnel -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 klogd -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 loadkmap -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 logread -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 losetup -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 lsmod -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 makedevs -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 mdev -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 mkdosfs -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 mke2fs -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 mkfs.ext2 -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 mkfs.minix -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 mkfs.vfat -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 mkswap -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 modinfo -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 modprobe -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 nameif -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 pivot_root -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 poweroff -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 raidautorun -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 reboot -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 rmmod -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 route -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 run-init -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 runlevel -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 setconsole -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 slattach -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 start-stop-daemon -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 sulogin -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 swapoff -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 swapon -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 switch_root -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 sysctl -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 syslogd -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 tc -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 tunctl -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 udhcpc -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 uevent -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 vconfig -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 watchdog -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct 30  2023 zcip -> ../bin/busybox
+/ $ ls -la sys
+ls -la sys
+total 0
+dr-xr-xr-x   12 root     root             0 Aug 16 20:43 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+drwxr-xr-x    2 root     root             0 Aug 16 20:46 block
+drwxr-xr-x   28 root     root             0 Aug 16 20:46 bus
+drwxr-xr-x   47 root     root             0 Aug 16 20:43 class
+drwxr-xr-x    4 root     root             0 Aug 16 20:46 dev
+drwxr-xr-x   14 root     root             0 Aug 16 20:43 devices
+drwxr-xr-x    5 root     root             0 Aug 16 20:46 firmware
+drwxr-xr-x    7 root     root             0 Aug 16 20:46 fs
+drwxr-xr-x   10 root     root             0 Aug 16 20:46 kernel
+drwxr-xr-x  112 root     root             0 Aug 16 20:46 module
+drwxr-xr-x    3 root     root             0 Aug 16 20:46 power
+/ $ ls -la t
+ls -la t
+total 0
+drwxr-xr-x    2 ctf      ctf             40 Aug 16 20:43 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+/ $ ls -la usr
+ls -la usr
+total 0
+drwxr-xr-x    4 root     root            80 Oct 30  2023 .
+drwxr-xr-x   12 root     root           340 Aug 16 20:43 ..
+drwxr-xr-x    2 root     root          3500 Oct 30  2023 bin
+drwxr-xr-x    2 root     root          1220 Oct 30  2023 sbin
+/ $ ls -la /usr/bin
+ls -la /usr/bin
+total 0
+drwxr-xr-x    2 root     root          3500 Oct 30  2023 .
+drwxr-xr-x    4 root     root            80 Oct 30  2023 ..
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 [ -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 [[ -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 awk -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 basename -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 bc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 beep -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 blkdiscard -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 bunzip2 -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 bzcat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 bzip2 -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 cal -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 chpst -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 chrt -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 chvt -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 cksum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 clear -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 cmp -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 comm -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 crontab -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 cryptpw -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 cut -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 dc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 deallocvt -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 diff -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 dirname -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 dos2unix -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 dpkg -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 dpkg-deb -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 du -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 dumpleases -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 eject -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 env -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 envdir -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 envuidgid -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 expand -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 expr -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 factor -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 fallocate -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 fgconsole -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 find -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 flock -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 fold -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 free -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ftpget -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ftpput -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 fuser -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 groups -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 hd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 head -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 hexdump -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 hexedit -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 hostid -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 id -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 install -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ipcrm -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ipcs -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 killall -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 last -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 less -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 logger -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 logname -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 lpq -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 lpr -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 lsof -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 lspci -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 lsscsi -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 lsusb -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 lzcat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 lzma -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 man -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 md5sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 mesg -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 microcom -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 mkfifo -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 mkpasswd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nl -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nmeter -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nohup -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nproc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nsenter -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nslookup -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 od -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 openvt -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 passwd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 paste -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 patch -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 pgrep -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 pkill -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 pmap -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 printf -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 pscan -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 pstree -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 pwdx -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 readlink -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 realpath -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 renice -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 reset -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 resize -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 rpm2cpio -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 runsv -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 runsvdir -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 rx -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 script -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 seq -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 setfattr -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 setkeycodes -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 setsid -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 setuidgid -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 sha1sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 sha256sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 sha3sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 sha512sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 showkey -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 shred -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 shuf -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 smemcap -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 softlimit -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 sort -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 split -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ssl_client -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 strings -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 sv -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 svc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 svok -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 tac -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 tail -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 taskset -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 tcpsvd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 tee -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 telnet -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 test -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 tftp -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 time -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 timeout -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 top -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 tr -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 traceroute -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 traceroute6 -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 truncate -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ts -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 tty -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ttysize -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 udhcpc6 -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 udpsvd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 unexpand -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 uniq -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 unix2dos -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 unlink -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 unlzma -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 unshare -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 unxz -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 unzip -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 uptime -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 users -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 uudecode -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 uuencode -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 vlock -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 volname -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 w -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 wall -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 wc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 wget -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 which -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 who -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 whoami -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 whois -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 xargs -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 xxd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 xz -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 xzcat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 yes -> ../../bin/busybox
+/ $ ls -la /usr/sbin
+ls -la /usr/sbin
+total 0
+drwxr-xr-x    2 root     root          1220 Oct 30  2023 .
+drwxr-xr-x    4 root     root            80 Oct 30  2023 ..
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 add-shell -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 addgroup -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 adduser -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 arping -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 brctl -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 chat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 chpasswd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 chroot -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 crond -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 delgroup -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 deluser -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 dhcprelay -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 dnsd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ether-wake -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 fakeidentd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 fbset -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 fdformat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 fsfreeze -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ftpd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 httpd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 i2cdetect -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 i2cdump -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 i2cget -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 i2cset -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 i2ctransfer -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ifplugd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 inetd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 killall5 -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 loadfont -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 lpd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 mim -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nanddump -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nandwrite -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nbd-client -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 nologin -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ntpd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 partprobe -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 popmaildir -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 powertop -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 rdate -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 rdev -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 readahead -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 readprofile -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 remove-shell -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 rtcwake -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 sendmail -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 setfont -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 setlogcons -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 svlogd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 telnetd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 tftpd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ubiattach -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ubidetach -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ubimkvol -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ubirename -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ubirmvol -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ubirsvol -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 ubiupdatevol -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct 30  2023 udhcpd -> ../../bin/busybox
