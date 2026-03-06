@@ -1,0 +1,67 @@
+soft cheeses
+
+    unripened
+        cottage cheese
+        cream cheese
+        feta
+        mascarpone
+        mozzarella
+    ripened with rennet only
+        halloumi
+    ripened with bacteria, enzymes, and surface microorganisms
+        Brie
+        Camembert
+        Pont-l’Évêque
+
+semihard and semisoft cheeses
+
+    ripened with bacteria and enzymes
+        Edam
+        Gouda
+        Monterey Jack
+        mozzarella
+        Münster
+        provolone
+    ripened with eye-producing bacteria and enzymes
+        Fontina
+    ripened with bacteria, enzymes, and surface microorganisms
+        Limburger
+        Port Salut
+    ripened with bacteria, enzymes, and blue mold
+        blue cheese
+            Roquefort
+            Stilton
+
+hard
+
+    ripened with bacteria and enzymes
+        cheddar
+    ripened with eye-producing bacteria and enzymes
+        Emmentaler (Swiss)
+        Gruyère
+
+very hard
+
+    ripened with bacteria and enzymes
+        Parmesan
+
+other
+
+    fermented with insects
+        casu marzu
+
+
+https://en.wikipedia.org/wiki/List_of_cheeses
+
+IVNMRKKRKOFFQRHSRHIAY
+
+cheddar
+DETYYNG
+
+c -> D
+h -> E
+3=4
+8=5
+
+3a+b = 4 mod 26
+8a+b = 5 mod 26

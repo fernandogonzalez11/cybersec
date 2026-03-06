@@ -1,0 +1,142 @@
+https://www.youtube.com/@ByteBlueWolfHacktheFuture
+
+Soy Byte, Red Teamer e internacionalista digital 🌍💜. Aquí comparto ideas, reflexiones y tips sobre hacking ético y OSINT.
+¡Gracias por ver mi canal! Estoy subiendo más contenido en Instagram @byte.Bluewolf, ahí es donde comparto cositas más personales 🌌🐺
+
+instagram.com/byte.bluewolf
+
+Dream until your dreams come true...”
+🐺 A veces, los secretos están más cerca de lo que crees. todo esta en la Letra.
+👇 Quizá esto es lo que buscas:
+🔗 https://aldana222.github.io/byte-osint-login/
+
+Aprender, compartir y proteger… ese es mi camino.
+💻 ¿Podrás seguir mis pasos?
+#HackingForGood #DreamBig #Cybersecurity #CTFChallenge #hackerslife
+
+“I'm just a dreamer, I dream my life away...”
+Porque hasta en la red, los sueños importan.
+#Dreamer #OSINTChallenge #Cyberpunk #HackLife #HackerMindset #HackHers #infosec
+
+El mundo digital es mi hogar, y protegerlo es mi misión.”
+Conóceme: soy Byte, Blue teamer y soñadora de un futuro más seguro.
+#CyberWolf #HackThePlanet #OSINT #blueteam💙 #HackHers #CTF #Cybersecurity
+
+followers:
+camiliita.ion
+_sebrenes_
+
+follows:
+nobody
+
+https://aldana222.github.io/byte-osint-login/
+https://github.com/aldana222
+https://github.com/Aldana222/byte-osint-login
+
+# byte-osint-login
+Reto OSINT inspirado en Byte, la lobita del Red Team 🐺💻. Incluye una página de login con contraseña oculta. Los jugadores deben encontrar el correo y deducir la contraseña correcta para acceder a un enlace protegido y conseguir la flag.
+
+const p1 = "byte.blue";
+const p2 = "wolf@proton";
+const p3 = "mail.com";
+const p4 = "D";
+const CORRECT = p1 + p2 + p3 + p4;
+    const ENCRYPTED = "Cg0AFV1YQ1oIEggNSC4KXQkdAwtCUiwPQiUsPg9BLQdXZk8VBRYPDiAPJEI5IzspQ1oYDg5xWjU1MiEmPShKBzQRCxUBWTE3MQ==";
+
+    function xorDecode(encoded, key) {
+      const data = atob(encoded);
+      let out = "";
+      for (let i = 0; i < data.length; i++) {
+        out += String.fromCharCode(data.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+      }
+      return out;
+    }
+
+    function checkPassword() {
+      const input = document.getElementById('password').value.trim();
+
+      if (input === CORRECT) {
+        document.getElementById('ok').classList.remove('hidden');
+        document.getElementById('error').classList.add('hidden');
+
+        const link = xorDecode(ENCRYPTED, CORRECT);
+
+        window.location.assign(link);
+
+      } else {
+        document.getElementById('error').classList.remove('hidden');
+        document.getElementById('ok').classList.add('hidden');
+      }
+    }
+
+    document.getElementById('btn').addEventListener('click', checkPassword);
+    document.getElementById('password').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+-----
+
+const CORRECT = "byte.bluewolf@protonmail.comD";
+    const ENCRYPTED = "Cg0AFV1YQ1oIEggNSC4KXQkdAwtCUiwPQiUsPg9BLQdXZk8VBRYPDiAPJEI5IzspQ1oYDg5xWjU1MiEmPShKBzQRCxUBWTE3MQ==";
+
+    function xorDecode(encoded, key) {
+      const data = atob(encoded);
+      let out = "";
+      for (let i = 0; i < data.length; i++) {
+        out += String.fromCharCode(data.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+      }
+      return out;
+    }
+
+    function checkPassword() {
+      const input = document.getElementById('password').value.trim();
+
+      if (input === CORRECT) {
+        document.getElementById('ok').classList.remove('hidden');
+        document.getElementById('error').classList.add('hidden');
+
+        const link = xorDecode(ENCRYPTED, CORRECT);
+
+        window.location.assign(link);
+
+      } else {
+        document.getElementById('error').classList.remove('hidden');
+        document.getElementById('ok').classList.add('hidden');
+      }
+    }
+
+    document.getElementById('btn').addEventListener('click', checkPassword);
+    document.getElementById('password').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+input byte.bluewolf@protonmail.comD ????
+https://mega.nz/file/3EclFCSK#Ts2H-ypsxaLid2KLOF-7ygb_9ZXvC_IMdeXdnbn5WwA
+
+byte_secret.png
+
+$ exiftool byte_secret.png 
+ExifTool Version Number         : 12.76
+File Name                       : byte_secret.png
+Directory                       : .
+File Size                       : 180 kB
+File Modification Date/Time     : 2025:11:16 12:40:21-06:00
+File Access Date/Time           : 2025:11:16 12:40:37-06:00
+File Inode Change Date/Time     : 2025:11:16 12:40:29-06:00
+File Permissions                : -rw-rw-r--
+File Type                       : PNG
+File Type Extension             : png
+MIME Type                       : image/png
+Image Width                     : 500
+Image Height                    : 500
+Bit Depth                       : 8
+Color Type                      : RGB with Alpha
+Compression                     : Deflate/Inflate
+Filter                          : Adaptive
+Interlace                       : Noninterlaced
+Image Size                      : 500x500
+Megapixels                      : 0.250
+
+LSB steganography (probably)
+https://stylesuxx.github.io/steganography/
+FLAG{BYTE_OSINT_UNLOCKED}
