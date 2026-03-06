@@ -1,0 +1,23 @@
+zip pw: kenton
+
+$ exiftool La_Liberté_guidant_le_peuple24.jpg 
+ExifTool Version Number         : 12.76
+File Name                       : La_Liberté_guidant_le_peuple24.jpg
+Directory                       : .
+File Size                       : 31 MB
+File Modification Date/Time     : 2025:09:05 07:15:51-06:00
+File Access Date/Time           : 2025:11:28 15:36:05-06:00
+File Inode Change Date/Time     : 2025:11:28 15:36:04-06:00
+File Permissions                : -rw-rw-r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Little-endian (Intel, II)
+Compression                     : Uncompressed
+Photometric Interpretation      : RGB
+Make                            : bGliZXJ0YWQ=
+
+bGliZXJ0YWQ= -> libertad
+
+
+

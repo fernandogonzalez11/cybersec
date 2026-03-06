@@ -1,0 +1,19 @@
+$ python3 exploit2.py 
+Random bytes: 19551
+Flag bytes: 47
+Known state indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 46]
+R0 = 215, R1 = 186
+Mismatch at s[0]: 124 vs 169
+Mismatch at s[2]: 213 vs 48
+Mismatch at s[3]: 216 vs 71
+Mismatch at s[4]: 102 vs 245
+Mismatch at s[5]: 248 vs 235
+Mismatch at s[6]: 112 vs 119
+Mismatch at s[7]: 173 vs 55
+Mismatch at s[8]: 69 vs 18
+Mismatch at s[9]: 167 vs 185
+Mismatch at s[10]: 43 vs 227
+Trying alternative parity assignment...
+Failed to recover consistent state
+Known state: {46: 155, 0: 169, 1: 124, 2: 48, 3: 71, 4: 245, 5: 235, 6: 119, 7: 55, 8: 18, 9: 185, 10: 227}
+Recovered state: [17, 17, 184, 181, 11, 149, 29, 192, 40, 202, 70, 102, 174, 146, 111, 179, 180, 223, 136, 128, 2, 98, 33, 46, 55, 231, 176, 71, 105, 49, 243, 103, 94, 128, 162, 9, 123, 67, 202, 76, 87, 7, 100, 14, 248, 52, 246]
