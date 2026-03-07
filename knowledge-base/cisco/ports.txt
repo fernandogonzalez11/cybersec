@@ -1,0 +1,43 @@
+21      TCP     FTP
+22      Both    SSH
+23      Both    Telnet
+25      TCP     SMTP
+53      Both    DNS
+69      UDP     TFTP    
+80      TCP     HTTP
+88      Both    Kerberos
+
+110     TCP     POP3
+119     TCP     NNTP (Usenet)
+135     Both    RPC
+137-139 Both    NetBIOS
+143     TCP     IMAP
+161     UDP     SNMP
+162     Both    SNMPTRAP
+
+389     Both    LDAP
+
+443     TCP     HTTPS
+445     TCP     SMB
+465/587 TCP     SMTP(25)+SSL/TLS
+
+514     UDP     Syslog
+
+636     Both    LDAP(389)+SSL/TLS
+
+860     TCP     iSCSI
+
+989/990 TCP     FTPS
+993
+995
+
+1433
+1645
+1701
+1723
+1812/1813
+3225
+3260
+3389
+3868
+6514
